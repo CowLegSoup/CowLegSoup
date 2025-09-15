@@ -1,159 +1,132 @@
-![header](./header.svg)
-
 <div align="center">
 
-# 🚀 **CowLegSoup** - *Digital Architect & Code Artisan*
+<img src="./header.svg" alt="Digital Architect & Code Artisan Header">
 
-**`Building the future, one commit at a time`**
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=6EE7B7&center=true&vCenter=true&width=600&lines=Full-Stack+Alchemist;Open+Source+Evangelist;System+Design+Enthusiast;Performance+Optimization+Ninja;Clean+Code+Craftsman)](https://git.io/typing-svg)
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=88C0D0&center=true&vCenter=true&width=600&lines=Architecting+Resilient+Systems;Crafting+Intuitive+User+Experiences;Optimizing+for+Performance+%26+Scale;Building+the+Future,+One+Commit+at+a+Time" alt="Typing SVG"></a>
 
 </div>
 
 ---
 
-<img align="right" width="400" src="https://github-readme-stats.vercel.app/api?username=CowLegSoup&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6EE7B7&icon_color=60A5FA&text_color=C9D1D9&count_private=true&include_all_commits=true" />
+### <p align="center">👨‍💻 About Me</p>
 
-### 🎯 **Mission Control**
-
-Currently orchestrating digital symphonies with:
-- 🏗️ **Scaling architectures** that handle millions of requests
-- 🎨 **Crafting design systems** that make developers smile  
-- 🔥 **Open-source contributions** that matter
-- 🧠 **Deep-diving into** distributed systems & performance optimization
-
-### ⚡ **Power Stack**
-
-<div align="left">
-
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
-
-![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/kubernetes-326ce5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white)
-![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white)
-![GraphQL](https://img.shields.io/badge/GraphQl-E10098?style=for-the-badge&logo=graphql&logoColor=white)
-
-</div>
-
----
-
-<div align="center">
-
-## 🏆 **Battle-Tested Achievements**
-
-| 💡 Innovation | 🎯 Impact | 🚀 Scale |
-|:---:|:---:|:---:|
-| **Built ML pipeline** processing 10M+ events/day | **Reduced latency by 85%** with smart caching | **Architected systems** serving 50K+ users |
-| **Open-sourced 12+ libraries** with 2K+ stars | **Mentored 25+ developers** in clean architecture | **Led 5+ cross-functional teams** to success |
-| **Automated deployments** cutting release time 90% | **Optimized databases** improving query speed 10x | **Designed APIs** powering multi-million $ products |
-
-</div>
-
----
-
-<div align="center">
-
-### 📊 **GitHub Analytics Dashboard**
-
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CowLegSoup&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6EE7B7&text_color=C9D1D9" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=CowLegSoup&theme=tokyonight&hide_border=true&background=0D1117&stroke=6EE7B7&ring=60A5FA&fire=FCA5A5&currStreakLabel=C9D1D9&sideLabels=C9D1D9&currStreakNum=6EE7B7&sideNums=60A5FA" />
-
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=CowLegSoup&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=6EE7B7&line=60A5FA&point=FCA5A5)
-
-</div>
-
----
-
-## 🚀 **Flagship Projects**
-
-<div align="center">
+I'm a **Digital Architect** and **Code Artisan** with a passion for building elegant, high-performance systems. My focus is on creating software that is not only powerful and scalable but also a joy for other developers to work with. I believe in the power of clean code, thoughtful design, and a strong open-source community.
 
 <table>
-<tr>
-<td width="50%">
+  <tr>
+    <td valign="top" width="50%">
+      
+**My Guiding Principles** 💡
 
-### 🎯 [**Quantum Design System**](https://github.com/CowLegSoup/quantum-design)
-*The future of component libraries*
+<details>
+<summary><b>Clean & Scalable Architecture</b></summary>
+<br>
+I design systems with a long-term vision, emphasizing modularity, separation of concerns, and clear APIs. The goal is to build a foundation that can gracefully evolve with changing requirements.
+</details>
 
-**Tech:** React, TypeScript, Storybook, Figma API  
-**Impact:** 40% faster dev cycles, 95% design consistency  
-**Stars:** ⭐ 1.2K+ | **Forks:** 🍴 200+
+<details>
+<summary><b>Performance by Default</b></summary>
+<br>
+Latency is the ultimate bug. I obsess over efficient algorithms, smart caching strategies, and optimized data flows to ensure a snappy and responsive user experience, even at scale.
+</details>
 
-```typescript
-// Beautiful, accessible, performant
-<QuantumButton variant="gradient" pulse>
-  Ship It! 🚀
-</QuantumButton>
-```
+<details>
+<summary><b>Developer Experience (DX) First</b></summary>
+<br>
+The best tools and systems are those that empower developers. I am dedicated to creating comprehensive documentation, automated workflows, and intuitive design systems that reduce friction and accelerate innovation.
+</details>
 
-</td>
-<td width="50%">
+    </td>
+    <td valign="top" width="50%">
 
-### ⚡ [**HyperAPI Engine**](https://github.com/CowLegSoup/hyperapi)
-*GraphQL meets real-time at scale*
+<div align="center">
 
-**Tech:** Go, GraphQL, WebSocket, Redis, K8s  
-**Impact:** 10M+ requests/day, 99.99% uptime  
-**Stars:** ⭐ 800+ | **Forks:** 🍴 150+
 
-```go
-// Auto-scaling, self-healing magic
-engine := hyperapi.New()
-engine.HandleMillion(requests)
-```
 
-</td>
-</tr>
+*Currently exploring the frontiers of distributed systems, WebAssembly, and Rust for high-concurrency applications.*
+
+</div>
+
+    </td>
+  </tr>
 </table>
 
+---
+
+### <p align="center">🛠️ My Digital Toolbox</p>
+
+My toolkit is constantly evolving. Here are the technologies I'm most proficient with right now:
+
+<table width="100%">
+  <tr>
+    <td width="33%" valign="top">
+      <p align="center"><b>Languages</b></p>
+      <div align="center">
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+        <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"/>
+        <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust"/>
+      </div>
+    </td>
+    <td width="33%" valign="top">
+      <p align="center"><b>Frontend & Backend</b></p>
+      <div align="center">
+        <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
+        <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+        <img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white" alt="GraphQL"/>
+      </div>
+    </td>
+    <td width="33%" valign="top">
+      <p align="center"><b>Infrastructure & Data</b></p>
+      <div align="center">
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+        <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes"/>
+        <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS"/>
+        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+        <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis"/>
+      </div>
+    </td>
+  </tr>
+</table>
+
+---
+
+### <p align="center">🚀 Featured Work</p>
+
+<div align="center">
+
+Here are some of the projects I'm passionate about. They are pinned to my profile for you to explore!
+
+*(This section intentionally left simple to let my pinned repositories speak for themselves.)*
+
 </div>
 
 ---
 
+### <p align="center">📊 My GitHub Vitals</p>
+
 <div align="center">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=CowLegSoup&show_icons=true&theme=nord&hide_border=true&bg_color=0D1117&title_color=88C0D0&icon_color=81A1C1&text_color=D8DEE9&count_private=true&include_all_commits=true" alt="CowLegSoup's GitHub Stats" />
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CowLegSoup&layout=compact&theme=nord&hide_border=true&bg_color=0D1117&title_color=88C0D0&text_color=D8DEE9" alt="Top Languages" />
+  <br>
+  <img width="96%" src="https://github-readme-streak-stats.herokuapp.com?user=CowLegSoup&theme=nord&hide_border=true&background=0D1117&stroke=88C0D0&ring=81A1C1&fire=BF616A&currStreakLabel=D8DEE9&sideLabels=D8DEE9&currStreakNum=88C0D0&sideNums=81A1C1" alt="GitHub Streak Stats"/>
+</div>
 
-## 🏅 **Trophy Collection**
-
-![](https://github-profile-trophy.vercel.app/?username=CowLegSoup&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&column=7)
-
+<div align="center">
+  <img src="https://raw.githubusercontent.com/CowLegSoup/CowLegSoup/main/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 </div>
 
 ---
 
+### <p align="center">🌐 Let's Connect</p>
+
 <div align="center">
 
-### 🌐 **Connect & Collaborate**
+I'm always open to collaborating on interesting projects or just chatting about technology.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://cowlegsoup.dev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/cowlegsoup)
+[![Portfolio](https://img.shields.io/badge/Portfolio-88C0D0?style=for-the-badge&logo=google-chrome&logoColor=black)](https://cowlegsoup.dev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/cowlegsoup)
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/cowlegsoup)
 [![Dev.to](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/cowlegsoup)
-
-**💬 Let's build something incredible together!**
-
-![Profile Views](https://komarev.com/ghpvc/?username=CowLegSoup&color=6EE7B7&style=for-the-badge)
-
-</div>
-
----
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/CowLegSoup/CowLegSoup/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
-</div>
-
----
-
-<div align="center">
-
-*"Code is poetry written in logic, architecture is the verse that makes it sing."*
-
-**⚡ Powered by caffeine, curiosity, and clean commits ⚡**
 
 </div>
