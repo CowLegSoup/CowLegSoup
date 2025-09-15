@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="300" viewBox="0 0 800 300" style="background: radial-gradient(circle, #0D1117 0%, #000000 100%);">
+  <defs>
+    <!-- Glowing filters -->
+    <filter id="techGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Tech icons as symbols -->
+    <g id="jsIcon">
+      <rect width="24" height="24" rx="4" fill="#F7DF1E"/>
+      <text x="12" y="16" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="#000">JS</text>
+    </g>
+
+    <g id="pyIcon">
+      <rect width="24" height="24" rx="4" fill="#3776AB"/>
+      <circle cx="8" cy="8" r="2" fill="#FFD43B"/>
+      <circle cx="16" cy="16" r="2" fill="#FFD43B"/>
+      <path d="M8 8 Q12 4 16 8 Q12 12 8 8" fill="#FFD43B"/>
+    </g>
+
+    <g id="reactIcon">
+      <rect width="24" height="24" rx="4" fill="#20232A"/>
+      <ellipse cx="12" cy="12" rx="8" ry="3" fill="none" stroke="#61DAFB" stroke-width="1"/>
+      <ellipse cx="12" cy="12" rx="8" ry="3" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(60 12 12)"/>
+      <ellipse cx="12" cy="12" rx="8" ry="3" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(-60 12 12)"/>
+      <circle cx="12" cy="12" r="2" fill="#61DAFB"/>
+    </g>
+
+    <g id="nodeIcon">
+      <rect width="24" height="24" rx="4" fill="#43853D"/>
+      <path d="M12 4 L18 8 L18 16 L12 20 L6 16 L6 8 Z" fill="#68A063" stroke="#43853D"/>
+      <text x="12" y="14" text-anchor="middle" font-family="monospace" font-size="8" fill="white">N</text>
+    </g>
+
+    <g id="tsIcon">
+      <rect width="24" height="24" rx="4" fill="#007ACC"/>
+      <text x="12" y="16" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="white">TS</text>
+    </g>
+
+    <g id="gitIcon">
+      <rect width="24" height="24" rx="4" fill="#F05032"/>
+      <circle cx="12" cy="12" r="8" fill="none" stroke="white" stroke-width="2"/>
+      <circle cx="8" cy="10" r="2" fill="white"/>
+      <circle cx="16" cy="14" r="2" fill="white"/>
+      <line x1="10" y1="10" x2="14" y2="14" stroke="white" stroke-width="2"/>
+    </g>
+  </defs>
+
+  <!-- Central hub -->
+  <circle cx="400" cy="150" r="40" fill="none" stroke="#00ff9f" stroke-width="3" filter="url(#techGlow)">
+    <animate attributeName="r" dur="4s" values="35;45;35" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" dur="2s" values="0.5;1;0.5" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Inner ring -->
+  <circle cx="400" cy="150" r="60" fill="none" stroke="#ff0080" stroke-width="1" opacity="0.6">
+    <animate attributeName="stroke-dasharray" dur="6s" values="0 377;188 189;0 377" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Outer ring -->
+  <circle cx="400" cy="150" r="100" fill="none" stroke="#ffff00" stroke-width="1" opacity="0.4">
+    <animate attributeName="stroke-dasharray" dur="8s" values="0 628;314 314;0 628" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Orbiting tech icons -->
+  <g>
+    <!-- JavaScript - closest orbit -->
+    <g transform-origin="400 150">
+      <animateTransform attributeName="transform" type="rotate" dur="8s" values="0 400 150;360 400 150" repeatCount="indefinite"/>
+      <use href="#jsIcon" x="430" y="138" filter="url(#techGlow)">
+        <animateTransform attributeName="transform" type="rotate" dur="2s" values="0;360" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- Python -->
+    <g transform-origin="400 150">
+      <animateTransform attributeName="transform" type="rotate" dur="10s" values="72 400 150;432 400 150" repeatCount="indefinite"/>
+      <use href="#pyIcon" x="470" y="138" filter="url(#techGlow)">
+        <animateTransform attributeName="transform" type="rotate" dur="3s" values="0;-360" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- React -->
+    <g transform-origin="400 150">
+      <animateTransform attributeName="transform" type="rotate" dur="12s" values="144 400 150;504 400 150" repeatCount="indefinite"/>
+      <use href="#reactIcon" x="480" y="138" filter="url(#techGlow)">
+        <animateTransform attributeName="transform" type="rotate" dur="1.5s" values="0;360" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- Node.js -->
+    <g transform-origin="400 150">
+      <animateTransform attributeName="transform" type="rotate" dur="14s" values="216 400 150;576 400 150" repeatCount="indefinite"/>
+      <use href="#nodeIcon" x="320" y="138" filter="url(#techGlow)">
+        <animateTransform attributeName="transform" type="rotate" dur="4s" values="0;-360" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- TypeScript -->
+    <g transform-origin="400 150">
+      <animateTransform attributeName="transform" type="rotate" dur="16s" values="288 400 150;648 400 150" repeatCount="indefinite"/>
+      <use href="#tsIcon" x="310" y="138" filter="url(#techGlow)">
+        <animateTransform attributeName="transform" type="rotate" dur="2.5s" values="0;360" repeatCount="indefinite"/>
+      </use>
+    </g>
+
+    <!-- Git -->
+    <g transform-origin="400 150">
+      <animateTransform attributeName="transform" type="rotate" dur="6s" values="0 400 150;-360 400 150" repeatCount="indefinite"/>
+      <use href="#gitIcon" x="300" y="138" filter="url(#techGlow)">
+        <animateTransform attributeName="transform" type="rotate" dur="3s" values="0;-360" repeatCount="indefinite"/>
+      </use>
+    </g>
+  </g>
+
+  <!-- Energy connections -->
+  <g stroke-width="2" fill="none" opacity="0.4">
+    <!-- Pulsing connections from center -->
+    <line x1="400" y1="150" x2="454" y2="150" stroke="#00ff9f">
+      <animate attributeName="stroke-opacity" dur="2s" values="0;1;0" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" dur="8s" values="0 400 150;360 400 150" repeatCount="indefinite"/>
+    </line>
+    
+    <line x1="400" y1="150" x2="494" y2="150" stroke="#ff0080">
+      <animate attributeName="stroke-opacity" dur="2s" values="0;1;0" repeatCount="indefinite" begin="0.4s"/>
+      <animateTransform attributeName="transform" type="rotate" dur="10s" values="72 400 150;432 400 150" repeatCount="indefinite"/>
+    </line>
+
+    <line x1="400" y1="150" x2="504" y2="150" stroke="#ffff00">
+      <animate attributeName="stroke-opacity" dur="2s" values="0;1;0" repeatCount="indefinite" begin="0.8s"/>
+      <animateTransform attributeName="transform" type="rotate" dur="12s" values="144 400 150;504 400 150" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Floating particles -->
+  <g opacity="0.6">
+    <circle r="2" fill="#00ff9f">
+      <animateMotion dur="15s" repeatCount="indefinite" 
+        path="M 100,50 Q 400,100 700,50 Q 400,200 100,50"/>
+      <animate attributeName="opacity" dur="3s" values="0;1;0" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle r="1.5" fill="#ff0080">
+      <animateMotion dur="12s" repeatCount="indefinite" begin="5s"
+        path="M 700,250 Q 400,200 100,250 Q 400,100 700,250"/>
+      <animate attributeName="opacity" dur="2s" values="0;1;0" repeatCount="indefinite" begin="5s"/>
+    </circle>
+
+    <circle r="1" fill="#ffff00">
+      <animateMotion dur="18s" repeatCount="indefinite" begin="10s"
+        path="M 400,50 Q 150,150 400,250 Q 650,150 400,50"/>
+      <animate attributeName="opacity" dur="4s" values="0;1;0" repeatCount="indefinite" begin="10s"/>
+    </circle>
+  </g>
+
+  <!-- Central pulse -->
+  <circle cx="400" cy="150" r="5" fill="#ffffff" opacity="0.8">
+    <animate attributeName="r" dur="2s" values="3;8;3" repeatCount="indefinite"/>
+    <animate attributeName="opacity" dur="2s" values="1;0.3;1" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Title -->
