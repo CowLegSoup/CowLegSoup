@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="250" viewBox="0 0 900 250" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0D1117 100%);">
+  <defs>
+    <!-- Terminal glow effect -->
+    <filter id="terminalGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- CRT scanlines -->
+    <pattern id="scanlines" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="2" fill="#000000" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Terminal window -->
+  <rect x="50" y="20" width="800" height="210" rx="10" fill="#0D1117" stroke="#00ff9f" stroke-width="2" filter="url(#terminalGlow)"/>
+  
+  <!-- Terminal header -->
+  <rect x="50" y="20" width="800" height="30" rx="10" fill="#1e1e1e"/>
+  <rect x="50" y="35" width="800" height="15" fill="#1e1e1e"/>
+  
+  <!-- Window controls -->
+  <circle cx="70" cy="35" r="5" fill="#ff5f56"/>
+  <circle cx="90" cy="35" r="5" fill="#ffbd2e"/>
+  <circle cx="110" cy="35" r="5" fill="#27ca3f"/>
+  
+  <!-- Terminal title -->
+  <text x="450" y="40" text-anchor="middle" font-family="'SF Mono', monospace" font-size="12" fill="#ffffff">
+    CowLegSoup@github:~$ ./stats_monitor.sh
+  </text>
+
+  <!-- Terminal content -->
+  <g font-family="'Fira Code', 'SF Mono', monospace" font-size="14" fill="#00ff9f">
+    
+    <!-- Command prompt -->
+    <text x="70" y="75">
+      <tspan fill="#ff0080">cowlegsoup@dev</tspan>:<tspan fill="#60a5fa">~</tspan>$ 
+      <tspan fill="#00ff9f">system_status</tspan>
+    </text>
+
+    <!-- System status output -->
+    <text x="70" y="100" fill="#ffffff">
+      <tspan>╭─ DEVELOPER STATUS ─────────────────────╮</tspan>
+    </text>
+    
+    <!-- Animated status bars -->
+    <g>
+      <text x="70" y="120" fill="#ffffff">│ Coding Energy:  </text>
+      <rect x="180" y="112" width="100" height="8" rx="4" fill="#1e1e1e" stroke="#333"/>
+      <rect x="180" y="112" width="0" height="8" rx="4" fill="#00ff9f">
+        <animate attributeName="width" dur="3s" values="0;85;85" begin="1s" fill="freeze"/>
+      </rect>
+      <text x="290" y="120" fill="#00ff9f">85%</text>
+      <text x="320" y="120" fill="#ffffff">│</text>
+    </g>
+
+    <g>
+      <text x="70" y="140" fill="#ffffff">│ Coffee Level:   </text>
+      <rect x="180" y="132" width="100" height="8" rx="4" fill="#1e1e1e" stroke="#333"/>
+      <rect x="180" y="132" width="0" height="8" rx="4" fill="#ffff00">
+        <animate attributeName="width" dur="3s" values="0;95;95" begin="2s" fill="freeze"/>
+      </rect>
+      <text x="290" y="140" fill="#ffff00">95%</text>
+      <text x="320" y="140" fill="#ffffff">│</text>
+    </g>
+
+    <g>
+      <text x="70" y="160" fill="#ffffff">│ Bug Count:      </text>
+      <rect x="180" y="152" width="100" height="8" rx="4" fill="#1e1e1e" stroke="#333"/>
+      <rect x="180" y="152" width="0" height="8" rx="4" fill="#ff0080">
+        <animate attributeName="width" dur="3s" values="0;25;25" begin="2.5s" fill="freeze"/>
+      </rect>
+      <text x="290" y="160" fill="#ff0080">25%</text>
+      <text x="320" y="160" fill="#ffffff">│</text>
+    </g>
+
+    <text x="70" y="180" fill="#ffffff">
+      <tspan>╰────────────────────────────────────────╯</tspan>
+    </text>
+
+    <!-- Real-time activity -->
+    <text x="400" y="100" fill="#ffffff">
+      <tspan>╭─ LIVE ACTIVITY ────────────╮</tspan>
+    </text>
+    
+    <text x="400" y="120" fill="#00ff9f">
+      │ ⚡ Commits today: 
+      <tspan id="commitCount">0</tspan>
+      <animate attributeName="opacity" dur="2s" values="1;0.5;1" repeatCount="indefinite"/>
+    </text>
+    
+    <text x="400" y="140" fill="#60a5fa">
+      │ 🔥 Streak: Active
+      <animate attributeName="fill" dur="3s" values="#60a5fa;#ff0080;#ffff00;#60a5fa" repeatCount="indefinite"/>
+    </text>
+    
+    <text x="400" y="160" fill="#ffff00">
+      │ 🎯 Focus: Building
+      <animate attributeName="opacity" dur="1.5s" values="1;0.7;1" repeatCount="indefinite"/>
+    </text>
+    
+    <text x="400" y="180" fill="#ffffff">
+      <tspan>╰────────────────────────────╯</tspan>
+    </text>
+
+    <!-- Blinking cursor -->
+    <text x="70" y="210" fill="#00ff9f">
+      $ █
+      <animate attributeName="opacity" dur="1s" values="1;0;1" repeatCount="indefinite"/>
+    </text>
+
+  </g>
+
+  <!-- Scanlines overlay -->
+  <rect x="50" y="50" width="800" height="180" fill="url(#scanlines)" opacity="0.3"/>
+
+  <!-- Screen flicker effect -->
+  <rect x="50" y="20" width="800" height="210" rx="10" fill="#00ff9f" opacity="0">
+    <animate attributeName="opacity" dur="0.1s" values="0;0.02;0" begin="5s" repeatCount="3"/>
+    <animate attributeName="opacity" dur="0.1s" values="0;0.01;0" begin="12s" repeatCount="2"/>
+  </rect>
+
+  <!-- Typing animation for commit count -->
+  <animate attributeName="nothing">
+    <set attributeName="textContent" to="3" begin="3s" dur="0.1s"/>
+    <set attributeName="textContent" to="7" begin="6s" dur="0.1s"/>
+    <set attributeName="textContent" to="12" begin="9s" dur="0.1s"/>
+  </animate>
+
+</svg>
