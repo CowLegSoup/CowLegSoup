@@ -164,3 +164,18 @@
   </circle>
 
   <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="'Fira Code', monospace" font-size="24" font-weight="bold" fill="#ffffff" filter="url(#techGlow)">
+    Tech Galaxy
+    <animate attributeName="opacity" dur="3s" values="0.7;1;0.7" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Constellation lines -->
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.2" fill="none">
+    <path d="M 150,80 Q 400,120 650,80">
+      <animate attributeName="stroke-opacity" dur="5s" values="0.1;0.4;0.1" repeatCount="indefinite"/>
+    </path>
+    <path d="M 150,220 Q 400,180 650,220">
+      <animate attributeName="stroke-opacity" dur="6s" values="0.1;0.3;0.1" repeatCount="indefinite" begin="2s"/>
+    </path>
+  </g>
+</svg>
