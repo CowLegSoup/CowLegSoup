@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 1000 200" style="background: #000000;">
+  <defs>
+    <!-- Matrix glow effect -->
+    <filter id="matrixGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gradient for fading effect -->
+    <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff9f;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#00ff9f;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#00ff9f;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Matrix code columns -->
+  <g font-family="'Fira Code', 'Courier New', monospace" font-size="12" font-weight="bold" filter="url(#matrixGlow)">
+    
+    <!-- Column 1 -->
+    <g fill="url(#fadeGradient)">
+      <text x="50" y="-20">
+        <tspan x="50" dy="15">const</tspan>
+        <tspan x="50" dy="15">function</tspan>
+        <tspan x="50" dy="15">return</tspan>
+        <tspan x="50" dy="15">async</tspan>
+        <tspan x="50" dy="15">await</tspan>
+        <tspan x="50" dy="15">import</tspan>
+        <tspan x="50" dy="15">export</tspan>
+        <tspan x="50" dy="15">class</tspan>
+        <tspan x="50" dy="15">extends</tspan>
+        <animateTransform attributeName="transform" type="translate" dur="8s" values="0,-280;0,200;0,-280" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- Column 2 -->
+    <g fill="#00ff9f">
+      <text x="150" y="-20">
+        <tspan x="150" dy="15">01001000</tspan>
+        <tspan x="150" dy="15">01100101</tspan>
+        <tspan x="150" dy="15">01101100</tspan>
+        <tspan x="150" dy="15">01101100</tspan>
+        <tspan x="150" dy="15">01101111</tspan>
+        <tspan x="150" dy="15">00100000</tspan>
+        <tspan x="150" dy="15">01010111</tspan>
+        <tspan x="150" dy="15">01101111</tspan>
+        <tspan x="150" dy="15">01110010</tspan>
+        <animateTransform attributeName="transform" type="translate" dur="6s" values="0,-250;0,200;0,-250" repeatCount="indefinite" begin="1s"/>
+      </text>
+    </g>
+
+    <!-- Column 3 -->
+    <g fill="url(#fadeGradient)">
+      <text x="250" y="-20">
+        <tspan x="250" dy="15">{'{'}</tspan>
+        <tspan x="250" dy="15">}</tspan>
+        <tspan x="250" dy="15">[</tspan>
+        <tspan x="250" dy="15">]</tspan>
+        <tspan x="250" dy="15">(</tspan>
+        <tspan x="250" dy="15">)</tspan>
+        <tspan x="250" dy="15">=></tspan>
+        <tspan x="250" dy="15">===</tspan>
+        <tspan x="250" dy="15">!==</tspan>
+        <animateTransform attributeName="transform" type="translate" dur="10s" values="0,-300;0,200;0,-300" repeatCount="indefinite" begin="2s"/>
+      </text>
+    </g>
+
+    <!-- Column 4 -->
+    <g fill="#00ff9f">
+      <text x="350" y="-20">
+        <tspan x="350" dy="15">npm</tspan>
+        <tspan x="350" dy="15">install</tspan>
+        <tspan x="350" dy="15">git</tspan>
+        <tspan x="350" dy="15">commit</tspan>
+        <tspan x="350" dy="15">push</tspan>
+        <tspan x="350" dy="15">pull</tspan>
+        <tspan x="350" dy="15">merge</tspan>
+        <tspan x="350" dy="15">branch</tspan>
+        <tspan x="350" dy="15">clone</tspan>
+        <animateTransform attributeName="transform" type="translate" dur="7s" values="0,-270;0,200;0,-270" repeatCount="indefinite" begin="0.5s"/>
+      </text>
+    </g>
+
+    <!-- Column 5 -->
+    <g fill="url(#fadeGradient)">
+      <text x="450" y="-20">
+        <tspan x="450" dy="15">404</tspan>
+        <tspan x="450" dy="15">200</tspan>
+        <tspan x="450" dy="15">500</tspan>
+        <tspan x="450" dy="15">301</tspan>
+        <tspan x="450" dy="15">401</tspan>
+        <tspan x="450" dy="15">403</tspan>
+        <tspan x="450" dy="15">204</tspan>
+        <tspan x="450" dy="15">418</tspan>
+        <tspan x="450" dy="15">503</tspan>
+        <animateTransform attributeName="transform" type="translate" dur="9s" values="0,-290;0,200;0,-290" repeatCount="indefinite" begin="1.5s"/>
+      </text>
+    </g>
+
+    <!-- Column 6 -->
+    <g fill="#00ff9f">
+      <text x="550" y="-20">
+        <tspan x="550" dy="15">React</tspan>
+        <tspan x="550" dy="15">Node</tspan>
+        <tspan x="550" dy="15">Python</tspan>
+        <tspan x="550" dy="15">Django</tspan>
+        <tspan x="550" dy="15">Flask</tspan>
+        <tspan x="550" dy="15">Vue</tspan>
+        <tspan x="550" dy="15">Angular</tspan>
+        <tspan x="550" dy="15">Docker</tspan>
+        <tspan x="550" dy="15">K8s</tspan>
+        <animateTransform attributeName="transform" type="translate" dur="5s" values="0,-240;0,200;0,-240" repeatCount="indefinite" begin="3s"/>
+      </text>
+    </g>
+
+    <!-- Column 7 -->
+    <g fill="url(#fadeGradient)">
+      <text x="650" y="-20">
+        <tspan x="650" dy="15">#!/bin/bash</tspan>
+        <tspan x="650" dy="15">sudo</tspan>
+        <tspan x="650" dy="15">chmod</tspan>
+        <tspan x="650" dy="15">mkdir</tspan>
+        <tspan x="650" dy="15">ls -la</tspan>
+        <tspan x="650" dy="15">grep</tspan>
+        <tspan x="650" dy="15">awk</tspan>
+        <tspan x="650" dy="15">sed</tspan>
+        <tspan x="650" dy="15">curl</tspan>
+        <animateTransform attributeName="transform" type="translate" dur="11s" values="0,-310;0,200;0,-310" repeatCount="indefinite" begin="2.5s"/>
+      </text>
+    </g>
+
+    <!-- Column 8 -->
+    <g fill="#00ff9f">
+      <text x="750" y="-20">
+        <tspan x="750" dy="15">SELECT</tspan>
+        <tspan x="750" dy="15">FROM</tspan>
+        <tspan x="750" dy="15">WHERE</tspan>
+        <tspan x="750" dy="15">JOIN</tspan>
+        <tspan x="750" dy="15">GROUP BY</tspan>
+        <tspan x="750" dy="15">ORDER BY</tspan>
+        <tspan x="750" dy="15">LIMIT</tspan>
+        <tspan x="750" dy="15">INSERT</tspan>
+        <tspan x="750" dy="15">UPDATE</tspan>
+        <animateTransform attributeName="transform" type="translate" dur="6.5s" values="0,-260;0,200;0,-260" repeatCount="indefinite" begin="1.8s"/>
+      </text>
+    </g>
+
+    <!-- Column 9 -->
+    <g fill="url(#fadeGradient)">
+      <text x="850" y="-20">
+        <tspan x="850" dy="15">console.log</tspan>
+        <tspan x="850" dy="15">debug</tspan>
+        <tspan x="850" dy="15">error</tspan>
+        <tspan x="850" dy="15">warn</tspan>
+        <tspan x="850" dy="15">info</tspan>
+        <tspan x="850" dy="15">trace</tspan>
+        <tspan x="850" dy="15">assert</tspan>
+        <tspan x="850" dy="15">time</tspan>
+        <tspan x="850" dy="15">clear</tspan>
+        <animateTransform attributeName="transform" type="translate" dur="8.5s" values="0,-285;0,200;0,-285" repeatCount="indefinite" begin="0.8s"/>
+      </text>
+    </g>
+
+  </g>
+
+  <!-- Glitch effect overlay -->
+  <rect x="0" y="0" width="1000" height="200" fill="#00ff9f" opacity="0">
+    <animate attributeName="opacity" dur="0.05s" values="0;0.1;0" begin="4s" repeatCount="1"/>
+    <animate attributeName="opacity" dur="0.03s" values="0;0.05;0" begin="7.2s" repeatCount="1"/>
+    <animate attributeName="opacity" dur="0.08s" values="0;0.03;0" begin="11.5s" repeatCount="1"/>
+  </rect>
+
+</svg>
