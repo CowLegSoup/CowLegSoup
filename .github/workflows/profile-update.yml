@@ -1,190 +1,47 @@
-name: 🚀 Dynamic Profile Update
+# .github/workflows/profile-update.yml
+name: 🚀 Refresh Profile Snake Animation
+
 on:
+  # Run automatically every 12 hours
   schedule:
-    - cron: '0 0,6,12,18 * * *'  # Updates 4 times daily for fresh content
+    - cron: '0 */12 * * *'
+  # Allow manual trigger from the Actions tab
   workflow_dispatch:
+  # Also run on push to main branch
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  update-profile:
-    name: ✨ Refresh Profile Magic
+  generate-snake:
+    name: 🐍 Generate Contribution Snake
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: 🐍 Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      - name: 📦 Install Dependencies
-        run: |
-          pip install requests python-dateutil pytz
-
-      - name: 📊 Generate Dynamic Stats
-        run: |
-          python << 'EOF'
-          import requests
-          import json
-          from datetime import datetime
-          import pytz
-          import os
-          
-          # GitHub API setup
-          headers = {
-              'Authorization': 'token ${{ secrets.GITHUB_TOKEN }}',
-              'Accept': 'application/vnd.github.v3+json'
-          }
-          
-          # Get user stats
-          user_data = requests.get('https://api.github.com/users/CowLegSoup', headers=headers).json()
-          repos_data = requests.get('https://api.github.com/users/CowLegSoup/repos?per_page=100', headers=headers).json()
-          
-          # Calculate dynamic stats
-          total_stars = sum(repo.get('stargazers_count', 0) for repo in repos_data)
-          total_forks = sum(repo.get('forks_count', 0) for repo in repos_data)
-          total_size = sum(repo.get('size', 0) for repo in repos_data)
-          
-          # Get current time in different timezones for global appeal
-          utc_time = datetime.now(pytz.UTC).strftime('%Y-%m-%d %H:%M UTC')
-          
-          # Fun dynamic quotes based on time
-          import random
-          quotes = [
-              "Code is poetry written in logic 🎭",
-              "Building the future, one commit at a time 🚀",
-              "Turning coffee into scalable systems ☕",
-              "Where creativity meets performance 🎨",
-              "Crafting digital experiences that matter ✨"
-          ]
-          daily_quote = quotes[datetime.now().day % len(quotes)]
-          
-          # Create stats file
-          stats = {
-              'total_stars': total_stars,
-              'total_forks': total_forks,
-              'total_repos': user_data.get('public_repos', 0),
-              'followers': user_data.get('followers', 0),
-              'last_updated': utc_time,
-              'daily_quote': daily_quote,
-              'kb_of_code': round(total_size / 1024, 1) if total_size > 0 else 0
-          }
-          
-          # Save to file
-          with open('profile_stats.json', 'w') as f:
-              json.dump(stats, f, indent=2)
-          
-          print(f"✅ Generated stats: {stats}")
-          EOF
-
-      - name: 🎨 Update README with Dynamic Content
-        run: |
-          python << 'EOF'
-          import json
-          import re
-          from datetime import datetime
-          
-          # Load generated stats
-          with open('profile_stats.json', 'r') as f:
-              stats = json.load(f)
-          
-          # Read current README
-          with open('README.md', 'r') as f:
-              readme = f.read()
-          
-          # Dynamic replacements
-          replacements = {
-              '<!--TOTAL_STARS-->': f"⭐ {stats['total_stars']}+ stars earned",
-              '<!--TOTAL_FORKS-->': f"🍴 {stats['total_forks']}+ forks created", 
-              '<!--TOTAL_REPOS-->': f"📦 {stats['total_repos']} repositories",
-              '<!--FOLLOWERS-->': f"👥 {stats['followers']} followers",
-              '<!--LAST_UPDATED-->': f"🕐 Last updated: {stats['last_updated']}",
-              '<!--DAILY_QUOTE-->': stats['daily_quote'],
-              '<!--KB_OF_CODE-->': f"💾 {stats['kb_of_code']}MB+ of code"
-          }
-          
-          # Apply replacements
-          for placeholder, value in replacements.items():
-              readme = readme.replace(placeholder, value)
-          
-          # Write updated README
-          with open('README.md', 'w') as f:
-              f.write(readme)
-          
-          print("✅ README updated with fresh stats!")
-          EOF
-
-      - name: 🐍 Generate Snake Animation
+      # This is the core step that generates the animation
+      - name: 🎨 Generate Snake Animation SVG
         uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: CowLegSoup
+          # Your GitHub username
+          github_user_name: ${{ github.repository_owner }}
+          # Define the output files for both light and dark themes
+          # The path here MUST match the path in your README.md
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
-      - name: 📈 Update Activity Graph
-        run: |
-          # Trigger activity graph update
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/CowLegSoup/CowLegSoup/dispatches" \
-            -d '{"event_type":"update-graph"}'
-
-      - name: 🎯 Commit Changes
+      # This step commits the newly generated file back to your repo
+      - name: 🚀 Commit & Push Changes
         uses: EndBug/add-and-commit@v9
         with:
-          author_name: 'Profile Bot'
-          author_email: 'profile-bot@github.com'
-          message: '🚀 Auto-update profile with fresh stats and animations'
-          add: |
-            README.md
-            profile_stats.json
-            dist/
-          default_author: github_actor
-
-      - name: 🎉 Celebrate Success
-        run: |
-          echo "🎊 Profile updated successfully!"
-          echo "📊 Stats refreshed with latest GitHub data"
-          echo "🐍 Snake animation regenerated"
-          echo "✨ Ready to impress visitors!"
-
-  # Bonus job: Generate metrics
-  generate-metrics:
-    name: 📊 Generate Advanced Metrics
-    runs-on: ubuntu-latest
-    needs: update-profile
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-    steps:
-      - name: 📈 Generate Metrics
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: CowLegSoup
-          template: classic
-          base: header, activity, community, repositories, metadata
-          config_timezone: UTC
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-          plugin_languages: yes
-          plugin_languages_analysis_timeout: 15
-          plugin_languages_categories: markup, programming
-          plugin_languages_colors: github
-          plugin_languages_limit: 8
-          plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_recent_load: 300
-          plugin_languages_sections: most-used
-          plugin_languages_threshold: 0%
-          plugin_notable: yes
-          plugin_notable_from: organization
-          plugin_achievements: yes
-          plugin_achievements_display: detailed
-          plugin_achievements_secrets: yes
-          plugin_achievements_threshold: C
+          # The branch to commit to
+          branch: main
+          # The user who will be credited for the commit
+          author_name: 'GitHub Actions Bot'
+          author_email: 'actions@github.com'
+          # The commit message
+          message: 'chore: 🐍 update contribution snake animation'
+          # The specific files to add. 'dist' folder contains our snake SVGs.
+          add: 'dist'
